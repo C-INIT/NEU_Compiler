@@ -1,26 +1,31 @@
 #pragma once
 #include"token.h"
+#include "SymTab.h"
 class Parser
 {
 	//文法开始
 	void program();
-	void segment();
+	//void segment();
+	void def();
 	Tag type();
 	
 	//声明与定义
-	Var* defdata(bool ext,Tag t);
-	void deflist(bool ext,Tag t);
-	Var* varrdef(bool ext,Tag t,bool ptr,string name);
-	Var* init(bool ext,Tag t,bool ptr,string name);
-	void def(bool ext,Tag t);
-	void idtail(bool ext,Tag t,bool ptr,string name);
+	void var_data();
+	void def_list();
+	void def_info();
+	// Var* defdata(bool ext,Tag t);
+	// void deflist(bool ext,Tag t);
+	// Var* varrdef(bool ext,Tag t,bool ptr,string name);
+	// Var* init(bool ext,Tag t,bool ptr,string name);
+	// void def(bool ext,Tag t);
+	// void id_tail(bool ext,Tag t,bool ptr,string name);
 	
 	//函数
-	Var* paradatatail(Tag t,string name);
+	Var* paradata_tail(Tag t,string name);
 	Var* paradata(Tag t);
 	void para(vector<Var*>&list);
 	void paralist(vector<Var*>&list);
-	void funtail(Fun*f);
+	void fun_tail(Fun*f);
 	void block();
 	void subprogram();
 	void localdef();
@@ -38,22 +43,23 @@ class Parser
 	Var* caselabel();
 	
 	//表达式
-	Var* altexpr();
-	Var* expr();
-	Var* assexpr();
-	Var* asstail(Var*lval);
-	Var* orexpr();
-	Var* ortail(Var*lval);
-	Var* andexpr();
-	Var* andtail(Var*lval);
-	Var* cmpexpr();
-	Var* cmptail(Var*lval);
+	Var* alt_exp();
+	Var* exp();
+	// Var* ass_exp();
+	// Var* ass_tail(Var*lval);
+	Var* assign();
+	Var* or_exp();
+	Var* or_tail(Var*lval);
+	Var* and_exp();
+	Var* and_tail(Var*lval);
+	Var* cmp_exp();
+	Var* cmp_tail(Var*lval);
 	Tag cmps();
-	Var* aloexpr();
-	Var* alotail(Var*lval);
+	Var* alo_exp();
+	Var* alo_tail(Var*lval);
 	Tag adds();
 	Var* item();
-	Var* itemtail(Var*lval);
+	Var* item_tail(Var*lval);
 	Tag muls();
 	Var* factor();
 	Tag lop();
@@ -61,7 +67,7 @@ class Parser
 	Tag rop();
 	Var* elem();
 	Var* literal();
-	Var* idexpr(string name);
+	Var* id_exp(string name);
 	void realarg(vector<Var*> &args);
 	void arglist(vector<Var*> &args);
 	Var* arg();
