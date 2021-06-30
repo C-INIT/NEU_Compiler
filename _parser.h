@@ -1,5 +1,5 @@
-#pragma once
 #include"token.h"
+
 class Parser
 {
 	//文法开始
@@ -68,7 +68,7 @@ class Parser
 	
 	//词法分析
 	Lexer &lexer;//词法分析器
-	Token look;//超前查看的字符
+	Token*look;//超前查看的字符
 	
 	//符号表
 	SymTab &symtab;
@@ -77,12 +77,8 @@ class Parser
 	GenIR &ir;
 	
 	//语法分析与错误修复
-	void nextw(){
-        
-    }
-	bool match(Tag t){
-        return look.tag == t;
-    }
+	void move();//移进
+	bool match(Tag t);//匹配,成功则移进
 	void recovery(bool cond,SynError lost,SynError wrong);//错误修复
 
 public:

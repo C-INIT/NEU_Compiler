@@ -11,8 +11,7 @@ const string tokenName[]=
 	"error",//错误，异常，结束标记等
 	"文件结尾",//文件结束
 	"标识符",//标识符
-	"int","char","void",//数据类型
-	"extern",//extern
+	"int","char","bool","float","double","void",//数据类型
 	"数字","字符","字符串",//字面量
 	"!","&",//单目运算 ! - & *
 	"+","-","*","/","%",//算术运算符

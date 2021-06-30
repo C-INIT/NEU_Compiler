@@ -1,5 +1,4 @@
 #pragma once
-
 #include <stdio.h>
 #include <vector>
 #include <list>
@@ -19,8 +18,7 @@ enum class Tag
 	ERR,																					//错误，异常
 	END,																					//文件结束标记
 	ID,																						//标识符
-	KW_INT,KW_CHAR,KW_VOID,												//数据类型
-	KW_EXTERN,																		//extern
+	KW_INT,KW_CHAR,KW_BOOL,KW_FLOAT,KW_DOUBLE,KW_VOID,												//数据类型																	//extern
 	NUM,CH,STR,																		//字面量
 	NOT,LEA,																			//单目运算 ! - & *
 	ADD,SUB,MUL,DIV,MOD,													//算术运算符
