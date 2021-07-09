@@ -19,7 +19,7 @@ enum class Tag
 	END,																					//文件结束标记
 	ID,																						//标识符
 	KW_INT,KW_CHAR,KW_BOOL,KW_FLOAT,KW_DOUBLE,KW_VOID,												//数据类型																	//extern
-	NUM,CH,STR,																		//字面量
+	INT_VAL, FLOAT_VAL,BOOL_VAL,CH_VAL,STRING_VAL,																		//字面量wq
 	NOT,LEA,																			//单目运算 ! - & *
 	ADD,SUB,MUL,DIV,MOD,													//算术运算符
 	INC,DEC,
@@ -33,7 +33,8 @@ enum class Tag
 	KW_IF,KW_ELSE,																//if-else
 	KW_SWITCH,KW_CASE,KW_DEFAULT,									//swicth-case-deault
 	KW_WHILE,KW_DO,KW_FOR,												//循环
-	KW_BREAK,KW_CONTINUE,KW_RETURN								//break,continue,return
+	KW_BREAK,KW_CONTINUE,KW_RETURN,								//break,continue,return
+	KW_TRUE,KW_FALSE
 };
 
 /*

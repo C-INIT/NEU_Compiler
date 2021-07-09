@@ -12,7 +12,7 @@ const string tokenName[]=
 	"文件结尾",//文件结束
 	"标识符",//标识符
 	"int","char","bool","float","double","void",//数据类型
-	"数字","字符","字符串",//字面量
+	"整数","浮点数","布尔值","字符","字符串",//字面量
 	"!","&",//单目运算 ! - & *
 	"+","-","*","/","%",//算术运算符
 	"++","--",
@@ -26,7 +26,8 @@ const string tokenName[]=
 	"if","else",//if-else
 	"switch","case","default",//swicth-case-deault
 	"while","do","for",//循环
-	"break","continue","return"//break,continue,return
+	"break","continue","return",//break,continue,return
+	"true","false"
 };
 
 /*******************************************************************************

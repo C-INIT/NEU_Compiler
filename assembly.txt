@@ -1,0 +1,45 @@
+PRINT _ Hello world!
+PRINT CHAR 10
+PRINT _ 求解100以内的偶数
+PRINT CHAR 10
+LD [R] 1
+ST [R] ans
+LD [R] ans
+MOD [R] 2
+EQ [R] 0
+FJ [R] 13
+PRINTI INT ans
+PRINT CHAR ' '
+LD [R] ans
+ADD [R] 1
+ST [R] ans
+GT [R] 100
+FJ [R] 7
+PRINT CHAR 10
+PRINT _ 结束
+PRINT CHAR 10
+PRINT _ 求解1000以内的斐波拉契数列
+PRINT CHAR 10
+LD [R] 1
+ST [R] a
+PRINT INT [R]
+PRINT CHAR ' '
+LD [R] 1
+ST [R] b
+PRINT INT [R]
+PRINT CHAR ' '
+LD [R] a
+ADD [R] b
+ST [R] c
+GT [R] 1000
+TJ [R] 44
+LD [R] c
+PRINT INT [R]
+PRINT CHAR ' '
+LD [R] b
+ST [R] a
+LD [R] c
+ST [R] b
+JMP _ 30
+PRINT CHAR 10
+PRINT _ 结束
