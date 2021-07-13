@@ -88,7 +88,7 @@ public:
 	
 	//管理操作
 	void addInst(InterInst*inst);//添加一条中间代码
-	
+	void addLive();//添加变量活跃信息
 	//关键操作
 	void markFirst();//标识“首指令”
 
