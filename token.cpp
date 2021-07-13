@@ -27,7 +27,7 @@ const string tokenName[]=
 	"switch","case","default",//swicth-case-deault
 	"while","do","for",//循环
 	"break","continue","return",//break,continue,return
-	"true","false"
+	"true","false","printf"
 };
 
 /*******************************************************************************
