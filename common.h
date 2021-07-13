@@ -34,7 +34,8 @@ enum class Tag
 	KW_SWITCH,KW_CASE,KW_DEFAULT,									//swicth-case-deault
 	KW_WHILE,KW_DO,KW_FOR,												//循环
 	KW_BREAK,KW_CONTINUE,KW_RETURN,								//break,continue,return
-	KW_TRUE,KW_FALSE
+	KW_TRUE,KW_FALSE,
+	KW_PRINTF
 };
 
 /*
